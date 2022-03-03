@@ -95,16 +95,23 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+        "Sales Order": {
+                "on_submit": "library_management.doctype.sales_order.sales_order.send_notifications",
+		"on_cancel": "library_management.doctype.sales_order.sales_order.send_notifications",
+                "before_update_after_submit": "library_management.doctype.sales_order.sales_order.send_notifications",
+		#"before_update_after_cancel": "library_management.doctype.sales_order.sales_order.send_notifications"
+
+        }
+}
+
+doctype_js = {
+        "Item" : "doctype/items/items.js"
+}
 
 # Scheduled Tasks
 # ---------------
+
 
 # scheduler_events = {
 # 	"all": [
