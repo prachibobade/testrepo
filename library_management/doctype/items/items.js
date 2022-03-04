@@ -25,7 +25,7 @@
 //})
 
 frappe.ui.form.on('Item', {
-    onload: function(frm) {
+    refresh: function(frm) {
     frm.add_custom_button(__('Barcode'), function(){
          //frappe.new_doc('barcodes',true)
     //frappe.msgprint(frm.doc.Barcode);
@@ -38,6 +38,7 @@ frappe.ui.form.on('Item', {
           },
               async:false,
               callback:function(r){
+                 frm.reload_doc()
                   console.log(r);
               }
       })
