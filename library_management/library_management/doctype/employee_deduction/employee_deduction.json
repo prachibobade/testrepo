@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Emp1.####",
+ "creation": "2022-03-15 12:34:24.561805",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "deduction_detail",
+  "deduction_calculation",
+  "current_month_balance",
+  "total_balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "deduction_detail",
+   "fieldtype": "Table",
+   "label": "Deduction Detail",
+   "options": "Deduction Detail"
+  },
+  {
+   "fieldname": "deduction_calculation",
+   "fieldtype": "Table",
+   "label": "Deduction Calculation",
+   "options": "Deduction Calculation"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_month_balance",
+   "fieldtype": "Currency",
+   "label": "Current Month Balance"
+  },
+  {
+   "fieldname": "total_balance",
+   "fieldtype": "Currency",
+   "label": "Total Balance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-24 16:10:02.529133",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Employee Deduction",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
